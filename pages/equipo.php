@@ -16,7 +16,7 @@
     <!--Barra de navegacion-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../inicio.php">Home</a>
+        <a class="navbar-brand" href="../index.php">Home</a>
         <button
           class="navbar-toggler"
           type="button"
