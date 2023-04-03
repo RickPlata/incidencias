@@ -1,14 +1,14 @@
-function conect(){
-  $dsn = "sqlsrv:Server={$_ENV['DB_HOST']};Database={$_ENV['DB_NAME']}";
-  $username = $_ENV['DB_USERNAME'] ?? NULL;
-  $password = $_ENV['DB_PASSWORD'] ?? NULL;
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "LABS-ICE";
 
-  $conn = new PDO($dsn, $username, $password);
+// Se crea la conexión
+$conn = mysqli_connect($host, $user, $password, $dbname);
 
-  if ($conn === false) {
-    echo "Unable to connect.</br>";
-    die(print_r(sqlsrv_errors(), true));
-  }
-
-  return $conn;
+// Se verifica conexión
+if (!$conn) {
+  die("Error en la conexión: " . mysqli_connect_error());
 }
+?>
