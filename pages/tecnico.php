@@ -13,6 +13,8 @@
     <!--Barra de navegacion-->
 <?php require_once '../src/utils/header.php' ?>
 
+<a href='../src/utils/tecnico_excel.php?name="Lista de reportes técnicos"'><input type='button' class='btn btn-success' value='Descargar reporte'  style="margin-top : 20px"></a>
+
 <div class="container-fluid" style="margin-top: 100px">
   <table class="table table-success table-striped">
             <tr>
@@ -30,7 +32,7 @@
               $sql = "SELECT * from equipos";
               $result = mysqli_query($conn,$sql);
 
-              while($row = mysqli_fetch_array($result)){
+              foreach ($result as $row) :
 
             ?>
 
@@ -48,7 +50,7 @@
               ?>
             </tr>
             <?php
-              }
+              endforeach;
             ?>
   </table>
 </div>

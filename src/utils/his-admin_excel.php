@@ -1,22 +1,14 @@
-<?php require_once '../src/functions/conexion.php' ?>
-<html lang="es">
-<head>
+<?php 
+    require_once '../functions/excel.php';
+    require_once '../functions/conexion.php';
+?>
+ <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <title>Historial de incidencias administrativas</title>
-</head>
-<body>
-<div>
-    <!--Barra de navegacion-->
-<?php require_once '../src/utils/header.php' ?>
+ </head>
 
-<a href='../src/utils/his-admin_excel.php?name="Hisotrial de reportes administrativos"'><input type='button' class='btn btn-success' value='Descargar reporte'  style="margin-top : 20px"></a>
+<h1>Historial de reportes administrativos</h1>
 
-<div class="container-fluid" style="margin-top: 100px">
-  <table class="table table-success table-striped">
+<table>
             <tr>
               <td><strong>ID</strong></td>
               <td><strong>Nombre</strong></td>
@@ -48,6 +40,3 @@
               endforeach;
             ?>
   </table>
-</div>
-</body>
-</html>
