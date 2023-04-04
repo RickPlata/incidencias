@@ -29,20 +29,20 @@
               $sql = "SELECT * from administrativos";
               $result = mysqli_query($conn,$sql);
 
-              while($mostrar = mysqli_fetch_array($result)){
+              while($row = mysqli_fetch_array($result)){
 
             ?>
 
             <tr>
-              <td><?php echo $mostrar['id']?></td>
-              <td><?php echo $mostrar['nombre']?></td>
-              <td><?php echo $mostrar['lab']?></td>
-              <td><?php echo $mostrar['materia']?></td>
-              <td><?php echo $mostrar['incidencia']?></td>
-              <td><?php echo $mostrar['hora']?></td>
-              <td><?php echo $mostrar['fechas']?></td>
+              <td><?php echo $row['id']?></td>
+              <td><?php echo $row['nombre']?></td>
+              <td><?php echo $row['lab']?></td>
+              <td><?php echo $row['materia']?></td>
+              <td><?php echo $row['incidencia']?></td>
+              <td><?php echo $row['hora']?></td>
+              <td><?php echo $row['fechas']?></td>
               <?php 
-              echo "<td> <a href='../src/functions/deladmin.php?id=".$mostrar['id']."'><input type='button' class='btn btn-danger' value='Completar'></a></td>";
+              echo "<td> <a href='../src/functions/deladmin.php?id=".$row['id']."'><input type='button' class='btn btn-danger' value='Completar'></a></td>";
               ?>
             </tr>
             <?php
