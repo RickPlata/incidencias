@@ -9,12 +9,11 @@
 
 <h1>Reportes administrativos activos</h1>
 
-<table>
+<table class="table table-success table-striped">
             <tr>
               <td><strong>ID</strong></td>
               <td><strong>Nombre</strong></td>
               <td><strong>Laboratorio</strong></td>
-              <td><strong>Numero de equipo</strong></td>
               <td><strong>Materia</strong></td>
               <td><strong>Incidencia</strong></td>
               <td><strong>Hora</strong></td>
@@ -37,7 +36,9 @@
               <td><?php echo $row['incidencia']?></td>
               <td><?php echo $row['hora']?></td>
               <td><?php echo $row['fechas']?></td>
+            </tr>
             <?php
               endforeach;
             ?>
+  </table>
   </table>
