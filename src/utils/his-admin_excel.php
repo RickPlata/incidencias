@@ -1,6 +1,7 @@
 <?php 
     require_once '../functions/excel.php';
     require_once '../functions/conexion.php';
+    require_once '../functions/ndate.php';
 ?>
  <head>
     <meta charset="UTF-8">
@@ -34,7 +35,7 @@
               <td><?php echo $row['materia']?></td>
               <td><?php echo $row['incidencia']?></td>
               <td><?php echo $row['hora']?></td>
-              <td><?php echo $row['fechas']?></td>
+              <td><?php echo nDate($row)?></td>
             </tr>
             <?php
               endforeach;

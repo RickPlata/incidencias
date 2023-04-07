@@ -1,4 +1,5 @@
 <?php require_once '../src/functions/conexion.php' ?>
+<?php require_once '../src/functions/ndate.php' ?>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +43,7 @@
               <td><?php echo $row['materia']?></td>
               <td><?php echo $row['incidencia']?></td>
               <td><?php echo $row['hora']?></td>
-              <td><?php echo $row['fechas']?></td>
+              <td><?php echo nDate($row)?></td>
               <?php 
               echo "<td> <a href='../src/functions/deladmin.php?id=".$row['id']."'><input type='button' class='btn btn-danger' value='Completar'></a></td>";
               ?>

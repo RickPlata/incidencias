@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$dbname = "incidenciastest";
+$dbname = "LABS_ICE";
 
 // Se crea la conexión
 $conn = mysqli_connect($host, $user, $password, $dbname);
