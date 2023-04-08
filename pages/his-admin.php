@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
-    <title>Incidencias administrativas</title>
+    <title>Historial de incidencias administrativas</title>
 </head>
 <body>
 <div>
     <!--Barra de navegacion-->
 <?php require_once '../src/utils/header.php' ?>
 
-<a href='../src/utils/admin_excel.php?name="Lista de reportes administrativos"'><input type='button' class='btn btn-success' value='Descargar reporte'  style="margin-top : 20px"></a>
+<a href='../src/utils/his-admin_excel.php?name="Hisotrial de reportes administrativos"'><input type='button' class='btn btn-success' value='Descargar reporte'  style="margin-top : 20px"></a>
 
 <div class="container-fluid" style="margin-top: 100px">
   <table class="table table-success table-striped">
@@ -29,7 +29,7 @@
             </tr>
 
             <?php
-              $sql = "SELECT * from administrativos";
+              $sql = "SELECT * from administrativosh";
               $result = mysqli_query($conn,$sql);
 
               foreach ($result as $row) :
@@ -44,9 +44,6 @@
               <td><?php echo $row['incidencia']?></td>
               <td><?php echo $row['hora']?></td>
               <td><?php echo nDate($row)?></td>
-              <?php 
-              echo "<td> <a href='../src/functions/deladmin.php?id=".$row['id']."'><input type='button' class='btn btn-danger' value='Completar'></a></td>";
-              ?>
             </tr>
             <?php
               endforeach;
