@@ -33,6 +33,9 @@
             <li class="nav-item">
               <a class="nav-link" href="./admin.php">Lista de reportes administrativos</a>
             </li>
+            <li class="nav-item">
+            <a href='../src/functions/logout.php'><input type='button' class='btn btn-danger' value='Cerrar sesion'></a>
+            </li>
           </ul>
 
     </header>

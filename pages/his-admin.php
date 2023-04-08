@@ -1,5 +1,6 @@
 <?php require_once '../src/functions/conexion.php' ?>
 <?php require_once '../src/functions/ndate.php' ?>
+<?php require_once '../src/functions/session_auth.php' ?>
 <html lang="es">
 <head>
     <meta charset="UTF-8">

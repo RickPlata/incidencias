@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+    if (empty($_SESSION['user'])) {
+      header('Location: ./login.php');
+      exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -44,6 +52,7 @@
             <li class="nav-item">
               <a class="nav-link" href="./pages/admin.php">Lista de reportes administrativos</a>
             </li>
+            <a href='./src/functions/logout.php'><input type='button' class='btn btn-danger' value='Cerrar sesion'></a>
           </ul>
     </header>
 

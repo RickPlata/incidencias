@@ -1,3 +1,4 @@
+<?php require_once '../src/functions/session_auth.php' ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
