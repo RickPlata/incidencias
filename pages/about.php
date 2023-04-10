@@ -1,3 +1,4 @@
+<?php require_once '../src/functions/session_auth.php' ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../img/robotico.png">
     <title>Acerca de</title>
 </head>
 <body>
@@ -46,12 +48,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="./admin.php">Lista de reportes administrativos</a>
               </li>
+              <li class="nav-item">
+                <a href='../src/functions/logout.php'><input type='button' class='btn btn-warning' value='Cerrar sesion'></a>
+              </li>
             </ul>
     </header>
 
     <section>
         
-    <div class="container py-5">
+    <div class="container py-5" style="width: 800px;">
         <div class="row">
             <div class="card mb-4">
                 <div class="card-body text-center">
@@ -71,9 +76,6 @@
                             </p>
                             <p>
                             Este sistema tiene como objetivo principal el mejor uso de los laboratorios y el mejoramiento de estos para conseguir un mejor aprovechamiento en la academia de computación de ICE.
-                            </p>
-                            <p>
-                            También es una forma de regresar a la escuela algo de lo tanto que me ha dado y espero que sea funcional y ayude en el mejoramiento, la evolución y la formación de mas ingenieros en esta área.
                             </p>
 
                         </p>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+    if (empty($_SESSION['user'])) {
+      header('Location: ./login.php');
+      exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/x-icon" href="./img/robotico.png">
     <title>Sistema de incidencias</title>
 </head>
 <body>
@@ -43,6 +52,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./pages/admin.php">Lista de reportes administrativos</a>
+            </li>
+            <li class="nav-item">
+              <a href='./src/functions/logout.php'><input type='button' class='btn btn-warning' value='Cerrar sesion'></a>
             </li>
           </ul>
     </header>
@@ -104,17 +116,5 @@
       </div>
         
     </section>
-    <footer>
-    
-      <nav class="navbar bg-body-tertiary fixed-bottom">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./img/robotico.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            Sistema de incidencias de laboratorios
-          </a>
-        </div>
-      </nav>
-
-    </footer>
 </body>
 </html>
