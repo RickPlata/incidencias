@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" type="image/x-icon" href="../img/robotico.png">
     <title>Incidencias administrativas</title>
 </head>
 <body>
